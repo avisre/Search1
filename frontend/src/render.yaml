@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: nebula-frontend
-    env: static
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
