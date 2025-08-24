@@ -1,0 +1,36 @@
+/* frontend/src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* optional: nicer scrollbars */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: rgba(148,163,184,.25); border-radius: 9999px; }
+*::-webkit-scrollbar-thumb:hover { background: rgba(148,163,184,.45); }
+
+/* subtle outer glow for gradient cards used by AnswerCard and input dock */
+/* subtle outer glow for gradient cards */
+.card-glow{
+  position:relative;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06) inset,
+    0 10px 35px -15px rgba(168,85,247,0.35),
+    0 14px 45px -12px rgba(56,189,248,0.25),
+    0 18px 55px -10px rgba(16,185,129,0.22);
+}
+/* answer shimmer accent */
+.answer-shine{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(1200px 300px at -10% 0%, rgba(217,70,239,0.06), transparent 60%),
+    radial-gradient(1200px 300px at 110% 100%, rgba(56,189,248,0.06), transparent 60%);
+  mix-blend-mode:screen;
+}
+/* Claude-like prose: clear headings & comfortable lists */
+.prose-claude {
+  --tw-prose-body: #1f2937;         /* stone-800 */
+  --tw-prose-headings: #111827;     /* stone-900 */
+  --tw-prose-bullets: #111827;
+  --tw-prose-links: #0369a1;        /* sky-700 */
+}
+.prose-claude ul > li::marker { font-size: 0.9em; }
